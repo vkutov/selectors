@@ -47,12 +47,12 @@ input{
     border : 2px solid blue  }
 
 /* 10. Alla <p> och <div> ska ha färgen svart #000*/
-div p{
+div, p{
     color: black;
 }
 
 /* 11. Alla  <p> som ligger nästlade (inuti) en div ska ha font-size: 22px*/
-div > p{
+div p{
     font-size: 22px
 }
 
@@ -69,12 +69,12 @@ h1:hover{
 
 /* 14. Gör så att alla besökta <a> element får färgen grå (:visited) */
 a:visited{
-    color: blue;
+    color: grey;
 }
 
 /* 15. Alla inmatningsfält (input) av typ 'text' ska ha grå bakgrund */
 input[type = text]{
-    background-color:blue;
+    background-color:gray;
 }
 
 /* 16. Alla checkboxrutor som är 'checked' ska får en vänstermarginal på 50px (margin-left: 50px) */
@@ -86,17 +86,33 @@ input[type=checkbox]:checked{
 
 
 /* 17. Ge alla p som är direkta barn till .container en font-weight på 700 */
+
 .container+p{
     font: weight 700px;
 }
 
 /* 18. Endast första listelementet i ul-listan ska få färg och font-size: 20px */
 
+ul li:first-of-type{
+    color: #bdc3c7;
+    font-size: 20px;
+}
+
 
 /* 19. Ge alla p som kommer direkt efter h2-elementet i den tredje div-en (class="third") en turkos bakgrundsfärg Tips: Adjacent sibling selector*/
+.third h2 + p{
+    background-color: turquoise;
+}
 
 
 /* 20. Ge alla p som kommer efter h2-elementet i den trdje div-en (class="third") en vit färg #fff Tips: General sibling selector*/
-
+.third h2 ~ p{
+    background-color:white;
+}
 
 /* 21. Ge den andra paragrafen i .contatinern en röd färg  font-size till 32px; (En utmaning...)*/
+.hello{
+    color: red;
+    font-size: 32px;
+
+}
